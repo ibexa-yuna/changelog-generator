@@ -26,7 +26,7 @@ then
   base_ref=$(git rev-list --max-parents=0 HEAD)
 fi
 
-log=$(git log "${base_ref}..${head_ref}" \
+log=$(git log "origin/${base_ref}..origin/${head_ref}" \
   --pretty=format:"*   %s" \
   --reverse)
 
