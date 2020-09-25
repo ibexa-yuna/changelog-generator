@@ -15,6 +15,9 @@ git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
 echo "unshallowing" 1>&2
 git fetch --prune --unshallow 1>&2
 
+echo "current branch is" 1>&2
+git status 1>&2
+
 # if folks don't have a base ref to compare against just use the initial
 # commit. This will show all the changes since the beginning but I can't
 # think of a better default.
