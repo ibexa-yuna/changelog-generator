@@ -28,6 +28,7 @@ fi
 
 log=$(git log "origin/${base_ref}..origin/${head_ref}" \
   --pretty=format:"*   %s" \
+  --no-merges \
   --reverse)
 
 if [ -z "$log" ];
