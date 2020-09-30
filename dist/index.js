@@ -1399,7 +1399,7 @@ async function run() {
     const myToken = core.getInput('myToken')
     const octokit = new github.GitHub(myToken)
     const { owner, repo } = github.context.repo
-    const regexp = /^[.A-Za-z0-9_-]*$/
+    const regexp = /^[\/.A-Za-z0-9_-]*$/
 
     if (!headRef) {
       headRef = github.context.sha
